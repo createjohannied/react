@@ -6,15 +6,10 @@ function Header({ title }) {
 
 export default function HomePage() {
   const names = ["Ada Lovelace", "Grace Hopper", "Margaret Hamilton"];
-
   return (
-    <div>
+    <div style={{ padding: "2rem" }}>
       <Header title="Develop. Preview. Ship." />
-      <ul>
-        {names.map((name) => (
-          <li key={name}>{name}</li>
-        ))}
-      </ul>
+      <ul>{names.map(n => <li key={n}>{n}</li>)}</ul>
       <LikeButton />
     </div>
   );
